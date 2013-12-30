@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minWidth="369.0" prefHeight="529.0" prefWidth="645.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="jobimprove.gui.MainstageController">
+  <center>
+    <SplitPane disable="false" dividerPositions="0.19595645412130638, 0.583203732503888" focusTraversable="true" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+      <items>
+        <SplitPane dividerPositions="0.46624472573839665" focusTraversable="true" minHeight="-1.0" minWidth="-1.0" orientation="VERTICAL" prefHeight="476.0" prefWidth="152.0" rotate="0.0">
+          <items>
+            <ScrollPane id="ScrollPane" fitToHeight="true" fitToWidth="true" pannable="false" prefHeight="182.0" prefViewportHeight="119.0" prefViewportWidth="158.0" prefWidth="145.0">
+              <content>
+                <TreeView id="basestationTree" fx:id="stationTree" editable="true" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" opacity="1.0" prefHeight="165.0" prefWidth="144.0" showRoot="true" />
+              </content>
+            </ScrollPane>
+            <ScrollPane id="ScrollPane" content="$null" fitToHeight="false" fitToWidth="false" prefViewportHeight="119.0" prefViewportWidth="158.0" />
+          </items>
+        </SplitPane>
+        <VBox maxWidth="1000.0" prefHeight="367.0" prefWidth="291.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0">
+              <children>
+                <ChoiceBox minWidth="23.0" prefWidth="23.0">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+                <Label text="Label" HBox.hgrow="SOMETIMES" />
+              </children>
+            </HBox>
+            <TableView fx:id="stationInfoTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="列 X" />
+                <TableColumn prefWidth="75.0" text="列 X" />
+              </columns>
+            </TableView>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+          </children>
+        </VBox>
+        <VBox alignment="TOP_LEFT" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-Infinity" prefHeight="476.0" prefWidth="207.0" snapToPixel="true">
+          <children>
+            <HBox id="HBox" alignment="CENTER_LEFT" prefWidth="169.0" spacing="5.0" VBox.vgrow="NEVER">
+              <children>
+                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="检查器" textAlignment="CENTER" underline="false" wrapText="false" />
+                <TextField alignment="TOP_LEFT" prefWidth="112.0" promptText="搜索" HBox.hgrow="SOMETIMES" />
+                <ChoiceBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="23.0" HBox.hgrow="NEVER">
+                  <items>
+                    <FXCollections fx:factory="observableArrayList">
+                      <String fx:value="项 1" />
+                      <String fx:value="项 2" />
+                      <String fx:value="项 3" />
+                    </FXCollections>
+                  </items>
+                </ChoiceBox>
+              </children>
+            </HBox>
+            <Accordion minWidth="112.0" prefHeight="348.0" prefWidth="112.0" VBox.vgrow="SOMETIMES">
+              <expandedPane>
+                <TitledPane fx:id="x1" animated="false" prefHeight="434.0" prefWidth="225.0" text="无标题">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </expandedPane>
+              <panes>
+                <TitledPane fx:id="x2" animated="false" text="无标题">
+                  <content>
+                    <AnchorPane id="Content" maxHeight="-1.0" maxWidth="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <fx:reference source="x1" />
+              </panes>
+            </Accordion>
+          </children>
+        </VBox>
+      </items>
+    </SplitPane>
+  </center>
+  <top>
+    <VBox alignment="TOP_LEFT" minHeight="49.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="661.0" BorderPane.alignment="TOP_LEFT">
+      <children>
+        <MenuBar>
+          <menus>
+            <Menu mnemonicParsing="false" text="文件">
+              <items>
+                <MenuItem mnemonicParsing="false" text="关闭" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="编辑">
+              <items>
+                <MenuItem mnemonicParsing="false" text="删除" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+              <items>
+                <MenuItem mnemonicParsing="false" text="关于" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <ToolBar>
+          <items>
+            <Button mnemonicParsing="false" text="Button" />
+            <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" text="操作 1" />
+                <MenuItem mnemonicParsing="false" text="操作 2" />
+              </items>
+            </SplitMenuButton>
+          </items>
+        </ToolBar>
+      </children>
+    </VBox>
+  </top>
+</BorderPane>
